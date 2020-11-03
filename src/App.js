@@ -20,7 +20,7 @@ function App() {
     selectDevelopersWithFavorite(favoriteId)
   );
   const favs = useSelector(selectFavsFromDev(selectedDev));
-  const user = useSelector(selectLoggedinUser);
+  const user = useSelector(selectLoggedinUser).name;
 
   return (
     <div>

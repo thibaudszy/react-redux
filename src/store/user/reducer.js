@@ -1,6 +1,6 @@
 const initialState = {
   id: 1,
-  name: "Bob",
+  name: "Thibaud",
 };
 
 export default function userSliceReducer(state = initialState, action) {
