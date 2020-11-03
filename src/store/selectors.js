@@ -6,3 +6,7 @@ export const selectFavsFromDev = (devId) => {
     );
   };
 };
+
+export const selectLoggedinUser = (state) => {
+  return state.user.name;
+};

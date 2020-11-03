@@ -1,3 +1,8 @@
 .counter-blocks {
   display: inline-flex;
 }
+.top-bar {
+  background-color: gainsboro;
+  margin: 1em;
+  padding-left: 1em;
+}

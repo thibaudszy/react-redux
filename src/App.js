@@ -5,8 +5,10 @@ import {
   selectDevelopers,
   selectDevelopersWithFavorite,
 } from "./store/developers/selectors";
-import { selectFavsFromDev } from "./store/selectors";
+import { selectFavsFromDev, selectLoggedinUser } from "./store/selectors";
 import { useState } from "react";
+import ResourcesSection from "./components/ResourcesSection";
+import AddResourceForm from "./components/AddResourceForm";
 
 function App() {
   const [favoriteId, setFavoriteId] = useState(2);
@@ -18,10 +20,13 @@ function App() {
     selectDevelopersWithFavorite(favoriteId)
   );
   const favs = useSelector(selectFavsFromDev(selectedDev));
+  const user = useSelector(selectLoggedinUser);
 
-  console.log("favs:", favs);
   return (
     <div>
+      <div className="top-bar">
+        <h2>Welcome back: {user}!</h2>
+      </div>
       <h1>Web development resources</h1>
       <div className="counter-blocks">
         <Counter dataSource={devs} tag="developers" />
@@ -65,6 +70,8 @@ function App() {
           </ul>
         </div>
       </div>
+      <ResourcesSection />
+      <AddResourceForm />
     </div>
   );
 }

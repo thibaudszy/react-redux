@@ -1,0 +1,14 @@
+.tag {
+  border: 1px solid rgb(196, 191, 191);
+  color: grey;
+  max-width: 100px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 50px;
+  margin: 1em;
+  display: inline;
+}
+
+.res-section {
+  margin-left: 1em;
+}
